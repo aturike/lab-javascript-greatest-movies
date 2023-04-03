@@ -106,7 +106,7 @@ function bestYearAvg(moviesArray) {
   //Creating an array which will hold objects of year and avg score
   avgArrYear = [];
   for (let i = 0; i < allYearsNoDouble.length; i++) {
-    const byYearArr = moviesArray.filter(
+    const byYearArr = [...moviesArray].filter(
       (element) => element.year === allYearsNoDouble[i]
     );
     avgArrYear.push({
